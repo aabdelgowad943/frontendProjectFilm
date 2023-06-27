@@ -1,0 +1,112 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #22254b;
+}
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000f1a;
+}
+::-webkit-scrollbar-thumb {
+  height: 200px;
+  background-color: #373b69;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #22254b;
+}
+/* ----------------------------------- */
+.films-card {
+}
+header {
+  width: 100%;
+  background-color: #373b69;
+  text-align: end;
+  padding: 10px;
+}
+@media (max-width: 767px) {
+  header {
+    text-align: center;
+  }
+  header .search  {
+    text-align: center;
+  }
+}
+header .search {
+  background-color: transparent;
+  border: 2px solid #22254b;
+  border-radius: 50px;
+  color: #fff;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  outline: none;
+}
+header .search:focus,
+header .search:hover {
+  background-color: #22254b;
+}
+
+.container {
+  padding: 10px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.container .film {
+  background-color: #373b69;
+  box-shadow: 0 4px 5px black;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.container .film img {
+  max-width: 100%;
+}
+.container .film .rate {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.container .film .rate h3 {
+  color: white;
+  font-weight: bold;
+}
+.container .film .rate span {
+  background-color: #22254b;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: orange;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #e5dddda3;
+  padding: 10px;
+  transition: 0.3s;
+  max-height: 100%;
+  overflow: auto;
+  transform: translateY(110%);
+}
+.container .film:hover .overlay {
+  transform: translateY(0);
+}
+.overlay h3 {
+  font-size: 30px;
+}
+.overlay p {
+  line-height: 1.6;
+  color: #000f1a;
+}
